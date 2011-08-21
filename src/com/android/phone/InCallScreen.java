@@ -3846,6 +3846,8 @@ public class InCallScreen extends Activity
                     if (DBG) log("internalAnswerCall: answering...");
                     PhoneUtils.answerCall(ringing);  // Automatically holds the current active call,
                                                     // if there is one
+                    PhoneUtils.setMute(true);
+                    PhoneUtils.setMute(false);
                 }
             } else {
                 throw new IllegalStateException("Unexpected phone type: " + phoneType);
